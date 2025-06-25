@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\softwere 2024-2025\\module 5\\the text advanture\\Zuul text advanture\\Zuul\\Zuul.csproj": {}
+    "D:\\softwere 2024-2025\\module 5\\the-borring-game-called-zuul\\Zuul\\Zuul.csproj": {}
   },
   "projects": {
-    "D:\\softwere 2024-2025\\module 5\\the text advanture\\Zuul text advanture\\Zuul\\Zuul.csproj": {
+    "D:\\softwere 2024-2025\\module 5\\the-borring-game-called-zuul\\Zuul\\Zuul.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\softwere 2024-2025\\module 5\\the text advanture\\Zuul text advanture\\Zuul\\Zuul.csproj",
+        "projectUniqueName": "D:\\softwere 2024-2025\\module 5\\the-borring-game-called-zuul\\Zuul\\Zuul.csproj",
         "projectName": "Zuul",
-        "projectPath": "D:\\softwere 2024-2025\\module 5\\the text advanture\\Zuul text advanture\\Zuul\\Zuul.csproj",
+        "projectPath": "D:\\softwere 2024-2025\\module 5\\the-borring-game-called-zuul\\Zuul\\Zuul.csproj",
         "packagesPath": "C:\\Users\\nickm\\.nuget\\packages\\",
-        "outputPath": "D:\\softwere 2024-2025\\module 5\\the text advanture\\Zuul text advanture\\Zuul\\obj\\",
+        "outputPath": "D:\\softwere 2024-2025\\module 5\\the-borring-game-called-zuul\\Zuul\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nickm\\AppData\\Roaming\\NuGet\\NuGet.Config"
