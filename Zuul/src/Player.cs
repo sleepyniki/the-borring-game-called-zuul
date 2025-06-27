@@ -4,13 +4,19 @@ class Player
 
     // fields 
     public int health;
+
+    private bool bleeding;
     private Inventory backpack;
     public Room CurrentRoom { get; set; }
+
+    public bool Bleeding { get { return bleeding; } }
+
     // constructor 
     public Player()
     {
         CurrentRoom = null;                 // player starts with no room
         health = 100;                       // player starts with 100 health
+        bleeding = true;                  // player starts with bleeding
         backpack = new Inventory(25);       // player starts with an empty backpack that can fit 25KG
     }
 
@@ -26,7 +32,7 @@ class Player
     {
         if (itemName == null)
         {
-            return "wha do you want to use again?";
+            return "what do you want to use again?";
         }
 
         Item item = backpack.Get(itemName);
@@ -42,13 +48,14 @@ class Player
             return "You used a toygun.";
         }
 
-        if (itemName == "bandage")
+        if (itemName == "enchanted-apple")
         {
-            Console.WriteLine("you use a bandage and stop the bleeding");
-            health += 5;
-            backpack.Remove("bandage"); // Remove the item from the backpack
+            Console.WriteLine("you ate the enchanted apple it healed your injurys");
+            // health += 5;
+            bleeding = false;
+            backpack.Remove("enchanted-apple"); // Remove the item from the backpack
 
-            return "You used a bandage.";
+            return "You used a enchanted apple.";
         }
 
         if (itemName == "knife")
@@ -61,6 +68,7 @@ class Player
             "you try to do a cool trick with the knife but you drop it dealing 20 damage to yourself",
             "when you look at the knife you see a reflection of yourself",
             "you look at the knife it reminds you of the time you failed to make a sandwich",
+            "you look at the knife perfect Weapon for a royal"
             };
             string randomResponse = respones[random.Next(respones.Length)];
             Console.WriteLine(randomResponse);                  // finds the random response
@@ -86,13 +94,16 @@ class Player
                 Console.WriteLine($"You have picked up {itemName}");    // Notify the user that the item has been picked up
                 return true;
             }
-            else
+            else if (item == null)
             {
                 CurrentRoom.Chest.Putinbackpack(item);
+                Console.WriteLine($"you have realized there nothing to pick up");
                 return false;
             }
         }
         return false;
+
+        
     }
     public void DropToroom(Command command)
     {

@@ -18,9 +18,9 @@ class Game
 	private void CreateRooms()
 	{
 		// Create the rooms
-		Room bedroom = new Room("your bedroom this is were you sleep");
-		Room hallway = new Room("this is the main hallway there 4 doors in here only 2 of them have guards");
-		Room armory = new Room("this is the armery you can find wapens here ");
+		Room bedroom = new Room("your bedroom this is were you sleep before you we're rudly interupted by the attack ");
+		Room hallway = new Room("this is the main hallway there 4 doors you can go to");
+		Room armory = new Room("this is the armery you can find wapens here");
 		Room dinnerhall = new Room("this is the dinnerhall this is where everyone will get there food");
 		Room kitchen = new Room("this is the kitchen we're food is made");
 		Room innergarden = new Room("this is the indoors garden ");
@@ -41,7 +41,7 @@ class Game
 		outsidegarden.AddExit("east", hallway);
 
 		armory.AddExit("east", hallway);
-		
+
 
 		dinnerhall.AddExit("north", kitchen);
 		dinnerhall.AddExit("south", hallway);
@@ -50,12 +50,12 @@ class Game
 
 		// Create your Items here
 		// Item sword = new (5, " knife");
-		// Item encheantedapple = new (5, " encheantedapple");
+		// Item enchanted-apple = new (5, " enchanted-apple");
 		// Item toygun = new (5, "toygun");
 
 		// And add them to the Rooms
 		armory.AddItem(new Item(5, "knife"));
-		dinnerhall.AddItem(new Item(5, "encheantedapple"));
+		dinnerhall.AddItem(new Item(5, "enchanted-apple"));
 		bedroom.AddItem(new Item(5, "toygun"));
 
 
@@ -148,8 +148,8 @@ class Game
 	// Here we print the mission and a list of the command words.
 	private void PrintHelp()
 	{
-		Console.WriteLine("You are lost. You are alone.");
-		Console.WriteLine("You wander around at the university.");
+		Console.WriteLine("You are a demon princess .");
+		Console.WriteLine("heaven is attacking you need to escape the castle.");
 		Console.WriteLine();
 		// let the parser print the commands
 		parser.PrintValidCommands();
@@ -178,10 +178,9 @@ class Game
 
 		player.CurrentRoom = nextRoom;
 		Console.WriteLine(player.CurrentRoom.GetLongDescription());
-		player.Damage(5);
-		if (player.Use("encheantedapple") == "You used a encheantedapple.")
+		if (player.Bleeding)
 		{
-			player.Damage(0);
+			player.Damage(5);
 		}
 		player.Checkhealth();
 	}
