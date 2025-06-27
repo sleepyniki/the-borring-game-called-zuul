@@ -7,13 +7,13 @@ class Player
 
     private bool bleeding;
 
-    private bool won;
+    // private bool won;
     private Inventory backpack;
     public Room CurrentRoom { get; set; }
 
     public bool Bleeding { get { return bleeding; } }
 
-    public bool wins {get { return wins; } }
+    // public bool wins {get { return wins; } 
 
     // constructor 
     public Player()

@@ -57,3 +57,18 @@ D:\softwere 2024-2025\module 5\the-borring-game-called-zuul\Zuul\obj\Debug\net8.
 D:\softwere 2024-2025\module 5\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.pdb
 D:\softwere 2024-2025\module 5\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.genruntimeconfig.cache
 D:\softwere 2024-2025\module 5\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\ref\Zuul.dll
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\bin\Debug\net8.0\Zuul.exe
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\bin\Debug\net8.0\Zuul.deps.json
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\bin\Debug\net8.0\Zuul.runtimeconfig.json
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\bin\Debug\net8.0\Zuul.dll
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\bin\Debug\net8.0\Zuul.pdb
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.AssemblyInfoInputs.cache
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.AssemblyInfo.cs
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.csproj.CoreCompileInputs.cache
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.sourcelink.json
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.dll
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\refint\Zuul.dll
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.pdb
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\Zuul.genruntimeconfig.cache
+C:\Users\belin\OneDrive\Documenten\code\the-borring-game-called-zuul\Zuul\obj\Debug\net8.0\ref\Zuul.dll

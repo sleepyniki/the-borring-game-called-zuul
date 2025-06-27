@@ -5,6 +5,7 @@ class Game
 	// Private fields
 	private Parser parser;
 	private Player player;
+	private Room outsidecastle; // Add this field
 
 	// Constructor
 	public Game()
@@ -25,7 +26,7 @@ class Game
 		Room kitchen = new Room("this is the kitchen we're food is made");
 		Room innergarden = new Room("this is the indoors garden ");
 		Room outsidegarden = new Room("this is the outdoor garden there a lot of plants");
-		Room outsidecastle = new Room("you reached the outside of the castle you escaped! you won!");
+		outsidecastle = new Room(""); 
 		
 		// Initialise room exits
 		bedroom.AddExit("down", hallway);
@@ -113,7 +114,7 @@ class Game
 				PrintHelp();              // print help information
 				break;
 			case "go":
-				GoRoom(command);          // go to a room
+				wantToQuit = GoRoom(command); // update here
 				break;
 			case "use":
 				Console.WriteLine(player.Use(command.SecondWord));
@@ -159,25 +160,22 @@ class Game
 
 	// Try to go to one direction. If there is an exit, enter the new
 	// room, otherwise print an error message.
-	private void GoRoom(Command command)
+	// Returns true if the player won (entered outsidecastle)
+	private bool GoRoom(Command command)
 	{
-
-
 		if (!command.HasSecondWord())
 		{
-			// if there is no second word, we don't know where to go...
 			Console.WriteLine("Go where?");
-			return;
+			return false;
 		}
 
 		string direction = command.SecondWord;
 
-		// Try to go to the next room.
 		Room nextRoom = player.CurrentRoom.GetExit(direction);
 		if (nextRoom == null)
 		{
 			Console.WriteLine("There is no door to " + direction + "!");
-			return;
+			return false;
 		}
 
 		player.CurrentRoom = nextRoom;
@@ -188,8 +186,15 @@ class Game
 		}
 		player.Checkhealth();
 
-		
+		if (player.CurrentRoom == outsidecastle)
+		{
+			Console.WriteLine("Congratulations! You escaped the castle and won the game!");
+			Console.WriteLine("Press [Enter] to exit.");
+			Console.ReadLine();
+			return true; // Signal to quit
+		}
 
+		return false;
 	}
 
 	
