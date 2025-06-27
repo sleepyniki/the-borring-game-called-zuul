@@ -18,48 +18,49 @@ class Game
 	private void CreateRooms()
 	{
 		// Create the rooms
-		Room outside = new Room("outside the main entrance of the university");
-		Room theatre = new Room("in a lecture theatre");
-		Room pub = new Room("in the campus pub");
-		Room lab = new Room("in a computing lab");
-		Room office = new Room("in the computing admin office");
-		Room backstage = new Room("in the backstage of the theatre");
-		Room uperpub = new Room("in the upper floor of the pub");
+		Room bedroom = new Room("your bedroom this is were you sleep");
+		Room hallway = new Room("this is the main hallway there 4 doors in here only 2 of them have guards");
+		Room armory = new Room("this is the armery you can find wapens here ");
+		Room dinnerhall = new Room("this is the dinnerhall this is where everyone will get there food");
+		Room kitchen = new Room("this is the kitchen we're food is made");
+		Room innergarden = new Room("this is the indoors garden ");
+		Room outsidegarden = new Room("this is the outdoor garden there a lot of plants");
 
 
 		// Initialise room exits
-		outside.AddExit("east", theatre);
-		outside.AddExit("south", lab);
-		outside.AddExit("west", pub);
+		bedroom.AddExit("down", hallway);
 
-		theatre.AddExit("west", outside);
-		theatre.AddExit("east", backstage);
+		hallway.AddExit("up", bedroom);
+		hallway.AddExit("east", innergarden);
+		hallway.AddExit("north", dinnerhall);
+		hallway.AddExit("west", armory);
 
-		backstage.AddExit("west", theatre);
+		innergarden.AddExit("west", hallway);
+		innergarden.AddExit("north", outsidegarden);
 
-		pub.AddExit("east", outside);
-		pub.AddExit("up", uperpub);
+		outsidegarden.AddExit("east", hallway);
 
-		uperpub.AddExit("down", pub);
+		armory.AddExit("east", hallway);
+		
 
-		lab.AddExit("north", outside);
-		lab.AddExit("east", office);
+		dinnerhall.AddExit("north", kitchen);
+		dinnerhall.AddExit("south", hallway);
 
-		office.AddExit("west", lab);
+		kitchen.AddExit("south", dinnerhall);
 
 		// Create your Items here
 		// Item sword = new (5, " knife");
-		// Item bandage = new (5, " bandage");
+		// Item encheantedapple = new (5, " encheantedapple");
 		// Item toygun = new (5, "toygun");
 
 		// And add them to the Rooms
-		pub.AddItem(new Item(5, "knife"));
-		lab.AddItem(new Item(5, "bandage"));
-		theatre.AddItem(new Item(5, "toygun"));
+		armory.AddItem(new Item(5, "knife"));
+		dinnerhall.AddItem(new Item(5, "encheantedapple"));
+		bedroom.AddItem(new Item(5, "toygun"));
 
 
-		// Start game outside
-		player.CurrentRoom = outside;
+		// Start game bedroom
+		player.CurrentRoom = bedroom;
 	}
 
 	//  Main play routine. Loops until end of play.
@@ -178,7 +179,7 @@ class Game
 		player.CurrentRoom = nextRoom;
 		Console.WriteLine(player.CurrentRoom.GetLongDescription());
 		player.Damage(5);
-		if (player.Use("bandage") == "You used a bandage.")
+		if (player.Use("encheantedapple") == "You used a encheantedapple.")
 		{
 			player.Damage(0);
 		}
