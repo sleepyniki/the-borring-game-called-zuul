@@ -25,8 +25,8 @@ class Game
 		Room kitchen = new Room("this is the kitchen we're food is made");
 		Room innergarden = new Room("this is the indoors garden ");
 		Room outsidegarden = new Room("this is the outdoor garden there a lot of plants");
-
-
+		Room outsidecastle = new Room("you reached the outside of the castle you escaped! you won!");
+		
 		// Initialise room exits
 		bedroom.AddExit("down", hallway);
 
@@ -39,6 +39,8 @@ class Game
 		innergarden.AddExit("north", outsidegarden);
 
 		outsidegarden.AddExit("east", hallway);
+		outsidegarden.AddExit("north", outsidecastle);
+
 
 		armory.AddExit("east", hallway);
 
@@ -159,6 +161,8 @@ class Game
 	// room, otherwise print an error message.
 	private void GoRoom(Command command)
 	{
+
+
 		if (!command.HasSecondWord())
 		{
 			// if there is no second word, we don't know where to go...
@@ -183,7 +187,12 @@ class Game
 			player.Damage(5);
 		}
 		player.Checkhealth();
+
+		
+
 	}
+
+	
 
 
 }

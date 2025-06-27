@@ -6,10 +6,14 @@ class Player
     public int health;
 
     private bool bleeding;
+
+    private bool won;
     private Inventory backpack;
     public Room CurrentRoom { get; set; }
 
     public bool Bleeding { get { return bleeding; } }
+
+    public bool wins {get { return wins; } }
 
     // constructor 
     public Player()
@@ -17,6 +21,7 @@ class Player
         CurrentRoom = null;                 // player starts with no room
         health = 100;                       // player starts with 100 health
         bleeding = true;                  // player starts with bleeding
+        // won = false;                        // player does not start having won
         backpack = new Inventory(25);       // player starts with an empty backpack that can fit 25KG
     }
 
